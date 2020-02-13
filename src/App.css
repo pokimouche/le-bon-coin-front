@@ -1,38 +1,348 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Roboto", sans-serif;
+  background: #fafafa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+  color: #000;
+}
+.container {
+  width: 1066px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  background: #fff;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* header Nav */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  margin-right: 44px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.submit-response-btn {
+  width: 204px;
+  height: 39px;
+  background-color: #f56b2a;
+  border: none;
+  border-radius: 5px;
+  font-family: Roboto;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  margin-right: 32px;
+}
+
+.submit-response-btn span {
+  margin-left: 10px;
+}
+
+.search-offer-btn {
+  width: 160px;
+  height: 60px;
+  border: none;
+}
+.search-offer-btn {
+  width: 160px;
+  height: 60px;
+  border: none;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+.search-offer-btn span {
+  font-size: 18px;
+  line-height: 21px;
+  margin-left: 15px;
+}
+
+.search-offer-btn.selected {
+  box-sizing: border-box;
+  border-bottom: 4px solid #f56b2a;
+}
+.nav-right {
+}
+.login-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  font-size: 20px;
+}
+
+.login-btn .selected {
+  box-sizing: border-box;
+  border-bottom: 4px solid #f56b2a;
+}
+.login-btn span {
+  margin-top: 6px;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.offers-ellipse {
+  height: 100px;
+  width: 100%;
+  background-color: #f56b2a;
+  border-radius: 0 0 600px 600px/0 0 80px 80px;
+}
+
+main {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.search-box {
+  box-sizing: border-box;
+  padding: 43px 122px;
+  background-color: #fff;
+  margin-top: -65px;
+  width: 810px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 39px;
+}
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+.search-field-wrapper {
+  background-color: #f4f6f7;
+  display: flex;
+  align-items: center;
+  color: #8191a0;
+  padding-left: 20px;
+}
+.search-field {
+  box-sizing: border-box;
+  width: 290px;
+  height: 44px;
+  background-color: #f4f6f7;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+  color: #8191a0;
+  padding: 13px;
+}
+
+.search-btn {
+  width: 220px;
+  height: 44px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  background-color: #4183d7;
+  border: none;
+}
+
+.offer-image {
+  width: 240px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.offer-item-wrapper {
+  margin-bottom: 19px;
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.offer-img-wrapper {
+  width: 240px;
+  height: 180px;
+  background-color: #cad1d9;
+  margin-right: 9px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.offer-img-wrapper img {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.offer-item-description-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.offer-title {
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 4px;
+}
+.top-offer-description,
+.bottom-offer-description {
+  flex: 1;
+}
+
+.offer-price {
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #f56b2a;
+}
+.paginator-wrapper {
+  margin-top: 28px;
+  display: flex;
+}
+.paginator {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+  width: 30px;
+  color: #336699;
+  font-size: 19px;
+}
+main.offer-margin {
+  margin-top: 104px;
+}
+/* offer */
+
+.offer-wrapper {
+  width: 700px;
+  margin-right: 18px;
+}
+.offer-content {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  height: 607px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.offer-content img {
+  width: 700px;
+  height: 393.56px;
+  object-fit: cover;
+}
+.offer-page {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.offer-owner-wrapper {
+  width: 279px;
+}
+.offer-owner {
+  background-color: #fff;
+
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.owner-name {
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 140%;
+  color: #000000;
+}
+.advertisement-number {
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 140%;
+
+  color: #4183d7;
+  padding-bottom: 13px;
+}
+
+.offer-owner-top {
+  box-sizing: border-box;
+  padding: 20px;
+  border-bottom: 1px solid #e6ebef;
+  flex: 1;
+}
+
+.offer-owner-bottom {
+  box-sizing: border-box;
+  padding: 20px;
+  flex: 1;
+}
+.buy-btn {
+  background: #f56b2a;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  width: 230px;
+  height: 44px;
+  color: #ffffff;
+}
+.offer-page-title {
+  font-size: 26px;
+  line-height: 30px;
+
+  color: #000000;
+}
+.offer-page-description {
+}
+
+.offer-page-price {
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #f56b2a;
+}
+
+.offer-content-wrapper {
+  display: flex;
+  height: 100%;
+  padding: 29px;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.top-offer-content {
+}
+
+.bottom-offer-content {
+  font-size: 16px;
+  line-height: 140%;
+  color: #000000;
+}
+
+.description-label {
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 140%;
+  color: #000000;
+  margin-bottom: 6px;
+}
+
+.description-offer {
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 140%;
 }
