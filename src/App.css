@@ -221,7 +221,7 @@ main {
   color: #336699;
   font-size: 19px;
 }
-main.offer-margin {
+main.header-fixed-margin {
   margin-top: 104px;
 }
 /* offer */
@@ -345,4 +345,189 @@ main.offer-margin {
   font-weight: normal;
   font-size: 19px;
   line-height: 140%;
+}
+
+/* account-creation */
+.create-account-documentation {
+  width: 500px;
+}
+.account-creation-wrapper {
+  padding: 30px 39px 37px 39px;
+  background-color: #fff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  width: 1000px;
+  box-sizing: border-box;
+}
+.account-documentation-title {
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 22px;
+  color: #000000;
+  margin-bottom: 47px;
+}
+
+.account-form-creation-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 22px;
+  color: #000000;
+  padding-bottom: 28px;
+  border-bottom: 3px solid #f56b2a;
+  margin-bottom: 33px;
+}
+
+.account-documentation-list li {
+  display: flex;
+  margin-bottom: 80px;
+}
+.account-documentation-item {
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #000000;
+}
+
+.account-documentation-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.image-doc-account {
+  margin-right: 29.5px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.account-creation-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.account-form-creation {
+  width: 360px;
+}
+
+.account-form-creation form {
+  display: flex;
+  flex-direction: column;
+}
+.account-form-creation input:not([type="checkbox"]) {
+  background: #ffffff;
+  border: 1px solid #d9e0eb;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  height: 44px;
+  margin-bottom: 19px;
+}
+
+.account-form-creation label {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  margin-bottom: 16px;
+
+  color: #000000;
+}
+.password-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.password-field-and-label {
+  display: flex;
+  width: calc(50% - 5px);
+  flex-direction: column;
+}
+.cgv-wrapper {
+  margin-bottom: 30px;
+}
+.cgv-wrapper label {
+  font-size: 12px;
+  line-height: 154.9%;
+
+  font-weight: normal;
+  color: #000000;
+}
+
+.cgv-wrapper span {
+  font-weight: bold;
+  color: #4183d7;
+}
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  display: inline-block;
+  font-size: 12px;
+}
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f56b2a;
+  background: #ffffff;
+  border-radius: 0px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: "✔";
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  font-size: 17px;
+  line-height: 1.2;
+  color: #09ad7e;
+  transition: all 0.2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #999999;
+  background-color: #dddddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaaaaa;
+}
+
+.account-creation-btn {
+  background-color: #4183d7;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+  text-align: center;
+  padding: 12px 0px 13px 12px;
+  color: #ffffff;
 }

@@ -18,6 +18,7 @@ import {
   faPlusSquare,
   faPlus
 } from "@fortawesome/free-solid-svg-icons";
+import AccountCreation from "./containers/AccountCreation";
 library.add(faUser, faSearch, faPlusSquare, faPlus);
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
     <Router>
       <Header></Header>
       <Switch>
+        <Route path="/account/creation">
+          <AccountCreation></AccountCreation>
+        </Route>
         <Route path="/Offer/:id">
           <Offer></Offer>
         </Route>

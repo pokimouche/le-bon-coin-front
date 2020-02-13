@@ -35,7 +35,7 @@ const Offer = props => {
       {isLoading === true ? (
         <p>En cours de chargement ...</p>
       ) : (
-        <main className="offer-margin container">
+        <main className="header-fixed-margin container">
           <div className="offer-page">
             <div className="offer-wrapper">
               <div className="offer-content">
