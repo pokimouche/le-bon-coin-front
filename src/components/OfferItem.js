@@ -13,23 +13,28 @@ const OfferItem = props => {
     date.getHours() +
     ":" +
     date.getMinutes();
+
+  const addDefaultSrc = event => {
+    event.target.src = "/default-img.jpg";
+  };
   return (
     <Link to={`/offer/${props._id}`} className="offer-item-wrapper">
-      <div class="offer-img-wrapper">
+      <div className="offer-img-wrapper">
         <img
+          onError={addDefaultSrc}
           className="offer-image"
           src={props.pictures.length === 0 ? defaultImage : props.pictures[0]}
           alt={props.title}
         ></img>
       </div>
       <div className="offer-item-description-wrapper">
-        <div class="top-offer-description">
+        <div className="top-offer-description">
           <p className="offer-title">{props.title}</p>
           <p className="offer-price">
             {props.price !== undefined ? props.price + " €" : null}
           </p>
         </div>
-        <div class="bottom-offer-description"></div>
+        <div className="bottom-offer-description"></div>
         {formatedDate}
       </div>
     </Link>

@@ -1,6 +1,22 @@
+body,
+html {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 body {
   font-family: "Roboto", sans-serif;
   background: #fafafa;
+}
+textarea,
+select,
+input,
+button {
+  outline: none;
 }
 
 a {
@@ -44,12 +60,18 @@ nav {
   border: none;
   border-radius: 5px;
   font-family: Roboto;
-
+  cursor: pointer;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: #fff;
   margin-right: 32px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.submit-response-btn:hover {
+  background-color: #c0562a;
 }
 
 .submit-response-btn span {
@@ -78,6 +100,7 @@ nav {
 .search-offer-btn.selected {
   box-sizing: border-box;
   border-bottom: 4px solid #f56b2a;
+  border-top: 4px solid #fff;
 }
 .nav-right {
 }
@@ -88,12 +111,15 @@ nav {
   align-items: center;
   background-color: #fff;
   border: none;
+  height: 60px;
+
   font-size: 20px;
 }
 
-.login-btn .selected {
+.login-btn.selected {
   box-sizing: border-box;
   border-bottom: 4px solid #f56b2a;
+  border-top: 4px solid #fff;
 }
 .login-btn span {
   margin-top: 6px;
@@ -110,6 +136,7 @@ nav {
 
 main {
   margin-top: 60px;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -211,16 +238,50 @@ main {
 .paginator-wrapper {
   margin-top: 28px;
   display: flex;
+  align-items: center;
 }
-.paginator {
+.paginator-link {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   width: 30px;
+  height: 30px;
   color: #336699;
   font-size: 19px;
+  border-radius: 3px;
 }
+.paginator-link:hover {
+  background-color: #f1f4f5;
+}
+
+.paginator-link.selected {
+  background: #f56b2a;
+
+  color: #fff;
+}
+
+.previous-paginator,
+.next-paginator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.previous-paginator.invisible,
+.next-paginator.invisible {
+  visibility: hidden;
+}
+
+.previous-paginator:hover,
+.next-paginator:hover {
+  background-color: #f1f4f5;
+}
+
 main.header-fixed-margin {
   margin-top: 104px;
 }
@@ -418,7 +479,8 @@ main.header-fixed-margin {
   border: 1px solid #d9e0eb;
   box-sizing: border-box;
   border-radius: 5px;
-
+  padding: 5px;
+  font-size: 16px;
   height: 44px;
   margin-bottom: 19px;
 }
@@ -530,4 +592,122 @@ main.header-fixed-margin {
   text-align: center;
   padding: 12px 0px 13px 12px;
   color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+.account-creation-btn:hover {
+  background-color: #369;
+}
+/* login page */
+.login-page-wrapper {
+  padding: 27px 0px;
+  width: 716px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-login-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 21px;
+  border-bottom: 3px solid #f56b2a;
+  margin-bottom: 31px;
+}
+
+.login-form-wrapper {
+  border-bottom: 1px solid #e4e8ec;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  width: 562px;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.login-form-wrapper input {
+  width: 100%;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid #d9e0eb;
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 19px;
+}
+
+.login-form-wrapper label {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.form-login-btn {
+  background-color: #4183d7;
+  border-radius: 5px;
+  height: 44px;
+  font-weight: bold;
+  border: none;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.form-login-btn:hover {
+  background-color: #369;
+}
+
+.without-account-wrapper {
+  width: 562px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.account-creation-link {
+  background: #ffffff;
+  border: 1px solid #4183d7;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4183d7;
+  width: center;
+  height: 44px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.without-account-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  padding-top: 18px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+footer {
+  height: 80px;
+  background-color: #474747;
+  margin-top: 33px;
 }

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import AccountCreationForm from "../components/AccountCreationForm";
 
 const AccountCreation = props => {
@@ -55,7 +54,10 @@ const AccountCreation = props => {
             </li>
           </ul>
         </div>
-        <AccountCreationForm></AccountCreationForm>
+        <AccountCreationForm
+          token={props.token}
+          setToken={props.setToken}
+        ></AccountCreationForm>
       </div>
     </main>
   );
